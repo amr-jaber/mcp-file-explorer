@@ -1,12 +1,12 @@
 from mcp.server.fastmcp import FastMCP
 import os
 
-# إعداد خادم الـ MCP المخصص لتصفح الملفات
+
 mcp = FastMCP("Local File Explorer")
 
 @mcp.tool()
 def list_directory(dir_path: str) -> str:
-    """استعراض محتويات أي مجلد محلي على الجهاز"""
+   
     try:
         if not os.path.exists(dir_path):
             return f"Error: Path does not exist: {dir_path}"
@@ -24,7 +24,7 @@ def list_directory(dir_path: str) -> str:
 
 @mcp.tool()
 def read_file_content(file_path: str) -> str:
-    """قراءة محتوى ملف نصي أو برمجي محدد"""
+   
     try:
         if not os.path.exists(file_path):
             return f"Error: File does not exist: {file_path}"
